@@ -1,0 +1,511 @@
+/* start general style */
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: "Alegreya";
+}
+ul{
+    list-style: none;
+}
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (min-width:768px){
+    .container{width: 750px;}
+}
+@media (min-width:992px){
+    .container{width: 970px;}
+}
+@media (min-width:1200px){
+    .container{width: 1170px;}
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+/* end general style */
+/* start inline block */
+/* start home */
+.fix{
+    position: fixed;
+    background-color: white;
+    right: 0;
+    top: 50%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.fix i{
+    color: gray;
+    display: block;
+    font-size: 20px;
+    margin: 10px;
+}
+.fix i:hover{
+    color: rgb(32, 32, 175);
+}
+.fix2{
+    right: 3%;
+    border-radius: 10px;
+    color: black;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 15px;
+    display: none;
+}
+.fix2:hover {
+    color: white;
+    background-color: blue;
+}
+.fix3{
+    top: 56%;
+}
+.fix a.gears:hover ~ a.fix.fix2.fix5 {
+    display: block;
+}
+.fix a.shopping:hover ~ .fix.fix2.fix3 {
+    display: block;
+}
+.nav{
+    position: fixed;
+    left: 0;
+    right: 0;
+    background-color: rgba(67,62,55,0.5);
+}
+#home{
+    position:relative;
+    background-image: url(../images/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+#home img{
+    width: 180px;
+}
+.logo{
+    display: inline-block;
+    width: 29%;
+    padding-top: 3px;
+    vertical-align: middle;
+}
+.special{
+    display: none;
+}
+.list{
+    display: inline-block;
+    width: 67%;
+    padding-left: 20%;
+    vertical-align: middle;
+}
+.list ul{
+    margin-right: 0;
+}
+.d-inline{
+    display: inline-block;
+}
+.list ul li{
+    padding-right: 15px;
+}
+/* #home .list li.blog{
+    position: relative;
+} */
+#home .list ul li a.color:hover{
+    color: rgb(116, 116, 24);
+}
+.list ul li div{
+    position: absolute;
+    display: none;
+    right: 9%;
+    /* left: 0; */
+}
+.list ul li ul.dropDownMenu{
+    background-color: rgba(67,62,55,0.95);
+}
+.list ul li ul.dropDownMenu li{
+    padding: 20px 90px 20px 20px;
+}
+#home .list ul li a.active:hover +div{
+    display: block;
+}
+.icon{
+    float: right;
+    width: 3%;
+    display: none;
+    font-size: 30px;
+}
+.clear{
+    clear: both;
+}
+#home .text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+#home .text h1{
+    font-size: 70px;
+}
+#home .text p{
+    font-size: 22px;
+    margin-bottom: 40px;
+}
+.twobutton{
+    width: 400px;
+    margin: auto;
+}
+#home .text button{
+    border: solid 1px white;
+    border-radius: 5px;
+    padding: 20px;
+    margin-right: 10px;
+    font-size: 17px;
+    color: white;
+}
+.home-button{
+    background-color: transparent;
+}
+#home .text button:hover{
+    background-color: white;
+    color: black;
+}
+.bg-brown{
+    background-color: #8e7754;
+    border: none!important;
+}
+.cylinder{
+    position: absolute;
+    border: solid 2px white;
+    height: 60px;
+    width: 30px;
+    border-radius: 30px;
+    top: 75%;
+    left: 50%;
+    transform: translateX(-50%);
+    
+}
+.circle{
+    position: absolute;
+    background-color: white;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    right: 35%;
+    display: none;
+}
+#home:hover .circle{
+    display: block;
+    animation-name: move;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes move{
+    from{top: 0%;  opacity: 0.9;}
+    to{top: 50%;  opacity: 0;}
+}
+@media (max-width:992px) {
+    #home .icon{
+        display: block;
+        padding-top: 20px;
+        padding-right: 20px;
+    }
+    #home .list{
+        display: none;
+        background-color: transparent;
+        width: 100%;
+        padding-left: 0;
+        background-color: rgba(225, 225, 225, 0.263);
+    }
+    #home .icon:hover +div.list{
+        display: block;
+    }
+    #home .list ul li{
+        display: block;
+        border-bottom: 1px solid gray;
+        padding-bottom: 10px;
+        padding-left: 10px;
+    }
+    #home .list ul li a{
+        color: black;
+    }
+    .home-button{
+        display: block;
+    }
+    .twobutton{
+        width: 140px;
+    }
+    #home .bg-brown{
+        margin-bottom: 20px;
+    }
+    .cylinder{
+        display: none;
+    }
+}
+@media (max-width:1200px) {
+    .list{
+        padding-left: 13%;
+    }
+    .list ul li div{
+        right: 8%;
+    }
+}
+/* end home section */
+/* start who we are */
+.whoWeAre{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.left{
+    display: inline-block;
+    width: 49%;
+    vertical-align: middle;
+}
+.left img{
+    width: 90%;
+}
+.right{
+    display: inline-block;
+    width: 49%;
+    vertical-align: middle;
+}
+h2{
+    padding-bottom: 20px;
+    font-size: 25px;
+    font-weight: 100;
+}
+.right .iconP{
+    padding-top: 20px;
+}
+.icon1{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border:  solid 1px #d4d0d0 ;
+    align-content: center;
+}
+.right i{
+    padding-left: 20%;
+    color: #8e7754;
+    font-size: 20px;
+}
+.right p{
+    display: inline-block;
+    font-size: 18px;
+}
+p{
+    color:  #686868;
+}
+#home p{
+    color: white;
+}
+@media (max-width:772px) {
+    .left , .right{
+        display: block;
+        width: 90%;
+        margin: auto;
+    }
+    .left{
+        margin-bottom: 30px;
+    }
+}
+/* end who we are */
+/* start our location */
+.ourlocation , .contact{
+    background-color: #f8f8f8;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.ourlocation p{
+    padding-bottom: 20px;
+    padding-right: 20px;
+}
+@media (max-width:772px) {
+    .sideleft , .sideright{ 
+        margin: 0 auto;
+    }
+    .sideleft{
+        margin-bottom: 30px;
+    }
+}
+/* end our location */
+/* end inline block */
+/* start float */
+/* start our baking */
+.ourbaking{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.ourbaking p , .ourbaking h2{
+    text-align: center;
+}
+.ourbaking .cards{
+    padding-top: 40px;
+}
+.ourbaking .card{
+    width: 33%;
+    float: left;
+    text-align: center;
+    padding: 15px;
+}
+.ourbaking img {
+    width: 100%;
+}
+@media (max-width:772px) {
+    .ourbaking .card{
+        width: 90%;
+        float: none;
+        padding-bottom: 50px;
+        margin: auto;
+    }
+}
+/* end our baking */
+/* start contact information */
+.contact{
+    background-color: #f8f8f8;
+}
+.sideleft{
+    width: 47%;
+    float: left;
+}
+.sideright{
+    width: 47%;
+    float: right;
+}
+.sideleft a{
+    color: #8e7754;
+}
+.sideleft .icon1{
+    border: none;
+    background-color: #8e7754;
+    margin-right: 20px;
+}
+.sideleft .iconP1{
+    padding-top: 20px;
+}
+.sideleft i{
+    color: white;
+    padding-left: 25%;
+}
+.iconadd, address{
+    float: left;
+}
+.sideleft .main{
+    margin-bottom: 20px;
+}
+@media (max-width:1075px) {
+    iframe{
+        width: 350px;
+    }
+}
+@media (max-width:772px) {
+    .sideleft, .sideright{
+        float: none;
+        width: 90%;
+    }
+    iframe{
+        width: 90%;
+    }
+    .contact .container{
+        align-content: center;
+
+    }
+}
+/* end contact information */
+/* start about */
+.about{
+    background-color: #403d38;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.about h2{
+color: white;
+}
+.about i{
+    margin-right: 20px;
+}
+.aboutUs , .weAreSpecial , .Opening , .details{
+    width: 24%;
+    float: left;
+    padding-right: 20px;
+}
+.pb{
+    border-bottom: solid 1px #686868;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.about i , .about a{
+    color: #686868;
+}
+.Opening i, .Opening p , .weAreSpecial i , .weAreSpecial p{
+    float: left;
+
+}
+.details{
+    background-image: url(../images/details.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+}
+
+.details .fa-location-dot , .details p{
+    float: left;
+}
+.details p , .trusted{
+    width: 80%;
+}
+.clear2{
+    display: none;
+
+}
+@media (max-width:992px) {
+    .aboutUs , .weAreSpecial , .Opening , .details{
+        width: 49%;
+    }
+    .clear2{
+        display: block;
+    }
+}
+@media (max-width:772px) {
+    .aboutUs , .weAreSpecial , .Opening , .details{
+        width: 90%;
+        margin-top: 20px;
+    }
+    
+}
+/* end about */
+/* start footer */
+.footer{
+    background-color: #353330;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    text-align: center;
+}
+.footer p{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.footer .icona{
+    background-color: #484540;
+    border: none;
+    margin-right: 10px;
+}
+/* end footer */
+/* end float */
+
+
+
